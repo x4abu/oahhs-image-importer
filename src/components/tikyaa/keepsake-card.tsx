@@ -47,7 +47,7 @@ export function KeepsakeCard({
         <h2 className="mt-1 font-display text-[28px] font-semibold leading-tight text-ink">
           Our Little Nikah Keepsake
         </h2>
-        <div className="mt-4 flex items-center justify-center gap-2">
+        <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
           <span className="font-display text-xl font-semibold text-ink">{GROOM}</span>
           <Heart className="size-4 fill-primary text-primary" />
           <span className="font-display text-xl font-semibold text-ink">{BRIDE}</span>

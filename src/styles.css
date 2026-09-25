@@ -40,6 +40,7 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   button:not(:disabled),
@@ -61,6 +62,18 @@
     background: var(--color-stage);
   }
 
+  input,
+  textarea,
+  button {
+    max-width: 100%;
+  }
+
+  p,
+  li,
+  figcaption {
+    overflow-wrap: anywhere;
+  }
+
   h1,
   h2,
   h3 {
@@ -76,6 +89,14 @@
   background:
     radial-gradient(120% 70% at 50% -10%, #ffe8ef 0%, transparent 55%),
     linear-gradient(180deg, #f8dde5 0%, #fbe8ee 46%, #fff8fa 100%);
+}
+
+.safe-top {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+.safe-bottom {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
 }
 
 .glass {
@@ -244,5 +265,11 @@
   .waiting-pulse,
   .fade-up {
     animation: none;
+  }
+}
+
+@media (max-height: 680px) and (orientation: landscape) {
+  .mascot-cut {
+    max-height: 6rem;
   }
 }

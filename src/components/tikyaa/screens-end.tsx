@@ -84,23 +84,23 @@ function AcceptCard({
         className,
       )}
     >
-      <div className="flex items-center justify-between gap-3">
-        <div>
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-3">
+        <div className="min-w-0">
           <p className="font-display text-xl font-semibold text-ink">{name}</p>
           <p className="text-xs text-ink-mute">{you ? "Signing as you" : "Your partner"}</p>
         </div>
         {accepted ? (
-          <span className="fade-up flex items-center gap-1.5 rounded-full bg-sage-soft px-3 py-1.5 text-xs font-semibold text-sage">
+          <span className="fade-up flex shrink-0 items-center gap-1.5 rounded-full bg-sage-soft px-3 py-1.5 text-xs font-semibold text-sage">
             <Check className="size-3.5" strokeWidth={3} /> Qubool
           </span>
         ) : waiting ? (
-          <span className="text-xs font-medium text-ink-mute">Waiting…</span>
+          <span className="shrink-0 text-xs font-medium text-ink-mute">Waiting…</span>
         ) : onAccept ? (
           <Button size="sm" className="rounded-full px-4" onClick={onAccept}>
             I Accept
           </Button>
         ) : (
-          <span className="text-xs font-medium text-ink-mute">Waiting for Zayan</span>
+          <span className="max-w-28 text-right text-xs font-medium text-ink-mute">Waiting for Zayan</span>
         )}
       </div>
     </GlassCard>

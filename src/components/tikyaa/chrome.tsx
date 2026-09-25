@@ -21,9 +21,9 @@ export type MascotPose = keyof typeof MASCOTS;
 
 export function PhoneShell({ children }: { children: ReactNode }) {
   return (
-    <div className="flex min-h-dvh w-full items-center justify-center bg-stage">
-      <div className="flex w-full max-w-[430px] flex-col md:py-5">
-        <div className="relative flex h-dvh flex-col overflow-hidden md:h-[min(760px,calc(100dvh-40px))] md:rounded-[40px] md:shadow-[var(--shadow-phone)]">
+    <div className="flex min-h-dvh w-full items-center justify-center bg-stage sm:p-4 lg:p-6">
+      <div className="flex w-full max-w-[430px] flex-col sm:max-w-[480px] lg:max-w-[520px]">
+        <div className="relative flex h-dvh min-h-0 flex-col overflow-hidden sm:h-[min(900px,calc(100dvh-32px))] sm:rounded-[40px] sm:shadow-[var(--shadow-phone)] lg:h-[min(900px,calc(100dvh-48px))]">
           <div className="tikyaa-scene absolute inset-0" />
           <Clouds />
           <div className="relative z-10 flex h-full min-h-0 flex-col">
@@ -41,7 +41,7 @@ export function PhoneShell({ children }: { children: ReactNode }) {
 
 function StatusBar() {
   return (
-    <div className="flex shrink-0 items-center justify-between px-6 pt-3 pb-1 text-ink">
+    <div className="safe-top flex shrink-0 items-center justify-between px-6 pt-3 pb-1 text-ink">
       <span className="text-xs font-semibold tabular-nums">9:41</span>
       <div className="flex items-center gap-1.5">
         <Signal className="size-3.5" strokeWidth={2.4} />
@@ -54,7 +54,7 @@ function StatusBar() {
 
 function HomeIndicator() {
   return (
-    <div className="flex shrink-0 justify-center pb-2 pt-1">
+    <div className="safe-bottom flex shrink-0 justify-center pb-2 pt-1">
       <span className="h-1.5 w-28 rounded-full bg-ink/20" />
     </div>
   );
@@ -203,7 +203,7 @@ export function Screen({
   className?: string | undefined;
 }) {
   return (
-    <div className={cn("flex min-h-full flex-col px-5 pb-5", className)}>{children}</div>
+    <div className={cn("mx-auto flex min-h-full w-full max-w-[520px] flex-col px-5 pb-5 sm:px-6", className)}>{children}</div>
   );
 }
 

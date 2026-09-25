@@ -93,7 +93,7 @@ export function SignaturePad({ onChange, className, label }: Props) {
 
   return (
     <div className={cn("flex flex-col gap-2", className)}>
-      <div className="relative h-44 overflow-hidden rounded-2xl bg-paper ring-1 ring-dusty/35">
+      <div className="relative h-36 overflow-hidden rounded-2xl bg-paper ring-1 ring-dusty/35 sm:h-44">
         <span className="pointer-events-none absolute left-4 top-3 text-[11px] font-semibold tracking-wide text-ink-mute uppercase">
           {label}
         </span>
