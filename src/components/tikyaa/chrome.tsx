@@ -214,9 +214,9 @@ export function PrimaryCta({
   className,
 }: {
   children: ReactNode;
-  onClick?: () => void;
-  disabled?: boolean;
-  className?: string;
+  onClick?: (() => void) | undefined;
+  disabled?: boolean | undefined;
+  className?: string | undefined;
 }) {
   return (
     <Button
