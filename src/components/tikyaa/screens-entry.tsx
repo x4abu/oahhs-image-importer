@@ -28,7 +28,7 @@ export function HomeScreen() {
       <div className="flex w-full flex-1 flex-col items-center">
         <CrescentMark className="mb-1 h-9 w-9" />
         <Mascot pose="welcome" size="lg" className="mt-1" />
-        <h1 className="mt-1 font-display text-6xl font-semibold leading-none tracking-tight text-ink">
+        <h1 className="mt-1 font-display text-5xl font-semibold leading-none tracking-tight text-ink sm:text-6xl">
           Tikyaa
         </h1>
         <p className="mt-2 text-center text-[15px] font-medium text-ink-soft">
