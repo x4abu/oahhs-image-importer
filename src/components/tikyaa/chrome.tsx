@@ -200,7 +200,7 @@ export function Screen({
   className,
 }: {
   children: ReactNode;
-  className?: string;
+  className?: string | undefined;
 }) {
   return (
     <div className={cn("flex min-h-full flex-col px-5 pb-5", className)}>{children}</div>
